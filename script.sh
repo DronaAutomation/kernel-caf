@@ -15,10 +15,10 @@ notice
 function variables() {
 
     ESSENTIAL_VARIABLES() {
-        TOOLCHAIN_DIR=DronaKernel/build/non-oc/toolchain
-        KERNEL_DIR=DronaKernel/build/non-oc/kernel
+        TOOLCHAIN_DIR=DronaKernel/build/toolchain
+        KERNEL_DIR=DronaKernel/build/kernel
         KERNEL_OUTPUT_DIR=workdir
-        KERNEL_DEFCONFIG=drona-rosy_defconfig
+        KERNEL_DEFCONFIG=vendor/phoenix_user_defconfig
         KERNEL_ARCH=arm64
     }
 
@@ -76,13 +76,13 @@ function variables() {
 
         kernel() {
             remote_variables() {
-                KERNEL_REPO=https://github.com/shivamjadon/Drona_Kernel_Rosy
-                KERNEL_BRANCH=q-caf
+                KERNEL_REPO=https://github.com/shivamjadon/kernel
+                KERNEL_BRANCH=eleven
             }
             options() {
                 KERNEL_BUILD_USER=shivam
                 KERNEL_BUILD_HOST=veronica
-                KERNEL_LOCALVERSION=-3.18
+                KERNEL_LOCALVERSION=-4.14
             }
             remote_variables
             options
